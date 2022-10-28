@@ -30,10 +30,15 @@ function App() {
     },
   ];
 
+  const submitExpenseHandler = (savedData) => {
+    console.log("in App js");
+    console.log(savedData);
+  };
+
   return (
     <Cards>
-      <NewExpense />
-      <Expenses expenses={expenses}></Expenses>
+      <NewExpense onSubmitExpense={submitExpenseHandler} />
+      <Expenses expenses={expenses} />
     </Cards>
   );
 }
